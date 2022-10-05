@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Products>;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">**Welcome to The Coffee Shop**
+                          ******************************
+  
+    </h1>
+    <br /> 
+
+  
+@foreach (Products prod in Model) 
+{
+        <br /> 
+  <h3> Coffee: @prod.Name     Price: $@prod.Price  </h3>
+        <a href="/products/detail/@prod.Id">Detail</a> 
+}
+   
+</div>
+
+
+
+
+
+
