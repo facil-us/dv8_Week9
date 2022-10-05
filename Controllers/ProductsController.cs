@@ -11,14 +11,14 @@ namespace Lab_01_CoffeeShop.Controllers
     {
         public IActionResult Index()
         {
-            var db = new MySqlConnection("Server=127.0.0.1; Database=coffeeshop; Uid=root; Pwd=Fidan1280!;");
+            var db = new MySqlConnection("Server=127.0.0.1; Database=coffeeshop; Uid=root; Pwd=!;");
             IEnumerable<Products> prods = db.GetAll<Products>();
             return View(prods);          
         }
 
         public IActionResult Detail(int Id)
         {
-            var db = new MySqlConnection("Server=127.0.0.1; Database=coffeeshop; Uid=root; Pwd=Fidan1280!;");
+            var db = new MySqlConnection("Server=127.0.0.1; Database=coffeeshop; Uid=root; Pwd=;");
             Products prod = db.Get<Products>(Id);
            
             List<Products> prods = db.Query<Products>
